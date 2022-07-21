@@ -1,7 +1,5 @@
-//klok en datum xD
-
-var span = document.getElementById('klok');
-var spann = document.getElementById('datum');
+var klok = document.getElementById('klok');
+var datum = document.getElementById('datum');
 
 function time() {
   var d = new Date();
@@ -62,52 +60,12 @@ var n = month[dd.getMonth()];
 if (s<10){
     s = '0' + s;
 }
-  span.textContent = h + ":" + m + ":" + s;
-  spann.textContent= dag + " " + maand_dag +  " " + n + " " + jaar;
+  klok.textContent = h + ":" + m + ":" + s;
+  datum.textContent= dag + " " + maand_dag +  " " + n + " " + jaar;
 }
 
 setInterval(time, 1000);
 
-// ---------------------------------------------------------------------------------------
-
-//jquery moment....
-
-$.get('https://api.openweathermap.org/data/2.5/weather?q=Tienen,be&appid=c0f39dfd1294407009096cbd062acd62&units=metric', function(data){
- var temp = data.main.temp;
- //console.log(temp)
- var weer = data.weather[0].main;
- //console.log(weer);
- var meer_weer = data.weather[0].description;
-
-
-  $('#temp').text("°C " + temp);
-  $('#weer').text( meer_weer + "!");
-});
-
-
-
-
-
-
-
-//geleend :v) van https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
-function unix(ux){
-  var date = new Date(ux*1000);
-// Hours part from the timestamp
-var hours = date.getHours();
-// Minutes part from the timestamp
-var minutes = "0" + date.getMinutes();
-// Seconds part from the timestamp
-var seconds = "0" + date.getSeconds();
-
-// Will display time in 10:30:23 format
-var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-
-console.log(formattedTime);
-}
-
-unix(time);
-//test
 
 
 

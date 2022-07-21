@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 
-
-:root {
-    --roze: #F0B0C8;
-    --zwart: #010204;
-}
 
 
 body {
     background-image: url("../img/bg.jpg");
+
     background-size: cover;
 }
 
@@ -19,25 +16,30 @@ html {
 
 
 
-.textshadow {
-    padding: 20px;
-    color: #ffffff;
-    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 
-}
 
-#klok,
-#datum,
-#temp,
-#weer {
+.datum {
+
     display: flex;
     flex-direction: column;
     align-content: center;
-    font-size: 80px;
     margin: 0 auto;
     padding: 10px;
+
+    /* font-family: 'Cuprum', sans-serif; */
+
+
+}
+
+.datum div {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
-    font-family: 'Cuprum', sans-serif;
+    padding: 10px;
+    color: #ffffff;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+
 }
 
 #links p {
@@ -47,7 +49,8 @@ html {
 .poe {
     background-image:url(../img/bg_poe.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
 }
 
 .direct img {
@@ -57,13 +60,25 @@ html {
 .tab {
     border-radius: 10%;
     margin:10px;
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     padding:5px;
-    box-sizing: border-box;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+box-sizing: border-box;
     transition: 0.3s;
 }
 
 .tab:hover {
-background-color: #F0B0C8;
+padding:10px;
+backdrop-filter: blur(8px);
+transform: scale(1.1);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
